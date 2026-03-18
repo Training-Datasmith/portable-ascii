@@ -227,7 +227,7 @@ final class ASCII
             return $LANGUAGES;
         }
 
-        foreach ((new \ReflectionClass(__CLASS__))->getConstants() as $constant => $lang) {
+        foreach ((new \ReflectionClass(self::class))->getConstants() as $constant => $lang) {
             if (\strpos($constant, 'EXTRA') !== false) {
                 $LANGUAGES[\strtolower($constant)] = $lang;
             } else {
@@ -510,7 +510,7 @@ final class ASCII
         }
 
         if ($remove_invisible_characters) {
-            $str = self::remove_invisible_characters($str);
+            return self::remove_invisible_characters($str);
         }
 
         return $str;
@@ -663,14 +663,9 @@ final class ASCII
      *
      * copy&past from https://github.com/bcit-ci/CodeIgniter/blob/develop/system/core/Common.php
      *
-     * @param string $str
-     * @param bool   $url_encoded
-     * @param string $replacement
-     * @param bool   $keep_basic_control_characters
      *
      * @psalm-pure
      *
-     * @return string
      */
     public static function remove_invisible_characters(
         string $str,
@@ -815,7 +810,7 @@ final class ASCII
                 if ($maxKeyLength >= 5) {
                     foreach ($matches[0] as $keyTmp => $char) {
                         if (isset($matches[0][$keyTmp + 4])) {
-                            $fiveChars = $matches[0][$keyTmp + 0] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2] . $matches[0][$keyTmp + 3] . $matches[0][$keyTmp + 4];
+                            $fiveChars = $matches[0][$keyTmp] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2] . $matches[0][$keyTmp + 3] . $matches[0][$keyTmp + 4];
                         } else {
                             $fiveChars = null;
                         }
@@ -843,7 +838,7 @@ final class ASCII
                 if ($maxKeyLength >= 4) {
                     foreach ($matches[0] as $keyTmp => $char) {
                         if (isset($matches[0][$keyTmp + 3])) {
-                            $fourChars = $matches[0][$keyTmp + 0] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2] . $matches[0][$keyTmp + 3];
+                            $fourChars = $matches[0][$keyTmp] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2] . $matches[0][$keyTmp + 3];
                         } else {
                             $fourChars = null;
                         }
@@ -870,7 +865,7 @@ final class ASCII
 
                 foreach ($matches[0] as $keyTmp => $char) {
                     if (isset($matches[0][$keyTmp + 2])) {
-                        $threeChars = $matches[0][$keyTmp + 0] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2];
+                        $threeChars = $matches[0][$keyTmp] . $matches[0][$keyTmp + 1] . $matches[0][$keyTmp + 2];
                     } else {
                         $threeChars = null;
                     }
@@ -896,7 +891,7 @@ final class ASCII
 
                 foreach ($matches[0] as $keyTmp => $char) {
                     if (isset($matches[0][$keyTmp + 1])) {
-                        $twoChars = $matches[0][$keyTmp + 0] . $matches[0][$keyTmp + 1];
+                        $twoChars = $matches[0][$keyTmp] . $matches[0][$keyTmp + 1];
                     } else {
                         $twoChars = null;
                     }
@@ -950,7 +945,7 @@ final class ASCII
         }
 
         if ($remove_unsupported_chars) {
-            $str = (string) \str_replace(["\n\r", "\n", "\r", "\t"], ' ', $str);
+            $str = \str_replace(["\n\r", "\n", "\r", "\t"], ' ', $str);
             $str = (string) \preg_replace('/' . self::$REGEX_ASCII . '/', '', $str);
         }
 
@@ -1074,7 +1069,7 @@ final class ASCII
         }
 
         if (\substr($str, -$l) === $separator) {
-            $str = (string) \substr($str, 0, \strlen($str) - $l);
+            return (string) \substr($str, 0, \strlen($str) - $l);
         }
 
         return $str;
