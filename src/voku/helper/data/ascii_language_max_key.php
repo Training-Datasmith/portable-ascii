@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'uz'                => 0,
     'tk'                => 1,

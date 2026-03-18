@@ -29,127 +29,127 @@ final class ASCII
     // INFO: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     //
 
-    const UZBEK_LANGUAGE_CODE = 'uz';
+    public const UZBEK_LANGUAGE_CODE = 'uz';
 
-    const TURKMEN_LANGUAGE_CODE = 'tk';
+    public const TURKMEN_LANGUAGE_CODE = 'tk';
 
-    const THAI_LANGUAGE_CODE = 'th';
+    public const THAI_LANGUAGE_CODE = 'th';
 
-    const PASHTO_LANGUAGE_CODE = 'ps';
+    public const PASHTO_LANGUAGE_CODE = 'ps';
 
-    const ORIYA_LANGUAGE_CODE = 'or';
+    public const ORIYA_LANGUAGE_CODE = 'or';
 
-    const MONGOLIAN_LANGUAGE_CODE = 'mn';
+    public const MONGOLIAN_LANGUAGE_CODE = 'mn';
 
-    const KOREAN_LANGUAGE_CODE = 'ko';
+    public const KOREAN_LANGUAGE_CODE = 'ko';
 
-    const KIRGHIZ_LANGUAGE_CODE = 'ky';
+    public const KIRGHIZ_LANGUAGE_CODE = 'ky';
 
-    const ARMENIAN_LANGUAGE_CODE = 'hy';
+    public const ARMENIAN_LANGUAGE_CODE = 'hy';
 
-    const BENGALI_LANGUAGE_CODE = 'bn';
+    public const BENGALI_LANGUAGE_CODE = 'bn';
 
-    const BELARUSIAN_LANGUAGE_CODE = 'be';
+    public const BELARUSIAN_LANGUAGE_CODE = 'be';
 
-    const AMHARIC_LANGUAGE_CODE = 'am';
+    public const AMHARIC_LANGUAGE_CODE = 'am';
 
-    const JAPANESE_LANGUAGE_CODE = 'ja';
+    public const JAPANESE_LANGUAGE_CODE = 'ja';
 
-    const CHINESE_LANGUAGE_CODE = 'zh';
+    public const CHINESE_LANGUAGE_CODE = 'zh';
 
-    const DUTCH_LANGUAGE_CODE = 'nl';
+    public const DUTCH_LANGUAGE_CODE = 'nl';
 
-    const ITALIAN_LANGUAGE_CODE = 'it';
+    public const ITALIAN_LANGUAGE_CODE = 'it';
 
-    const MACEDONIAN_LANGUAGE_CODE = 'mk';
+    public const MACEDONIAN_LANGUAGE_CODE = 'mk';
 
-    const PORTUGUESE_LANGUAGE_CODE = 'pt';
+    public const PORTUGUESE_LANGUAGE_CODE = 'pt';
 
-    const GREEKLISH_LANGUAGE_CODE = 'el__greeklish';
+    public const GREEKLISH_LANGUAGE_CODE = 'el__greeklish';
 
-    const GREEK_LANGUAGE_CODE = 'el';
+    public const GREEK_LANGUAGE_CODE = 'el';
 
-    const HINDI_LANGUAGE_CODE = 'hi';
+    public const HINDI_LANGUAGE_CODE = 'hi';
 
-    const SWEDISH_LANGUAGE_CODE = 'sv';
+    public const SWEDISH_LANGUAGE_CODE = 'sv';
 
-    const TURKISH_LANGUAGE_CODE = 'tr';
+    public const TURKISH_LANGUAGE_CODE = 'tr';
 
-    const BULGARIAN_LANGUAGE_CODE = 'bg';
+    public const BULGARIAN_LANGUAGE_CODE = 'bg';
 
-    const HUNGARIAN_LANGUAGE_CODE = 'hu';
+    public const HUNGARIAN_LANGUAGE_CODE = 'hu';
 
-    const MYANMAR_LANGUAGE_CODE = 'my';
+    public const MYANMAR_LANGUAGE_CODE = 'my';
 
-    const CROATIAN_LANGUAGE_CODE = 'hr';
+    public const CROATIAN_LANGUAGE_CODE = 'hr';
 
-    const FINNISH_LANGUAGE_CODE = 'fi';
+    public const FINNISH_LANGUAGE_CODE = 'fi';
 
-    const GEORGIAN_LANGUAGE_CODE = 'ka';
+    public const GEORGIAN_LANGUAGE_CODE = 'ka';
 
-    const RUSSIAN_LANGUAGE_CODE = 'ru';
+    public const RUSSIAN_LANGUAGE_CODE = 'ru';
 
-    const RUSSIAN_PASSPORT_2013_LANGUAGE_CODE = 'ru__passport_2013';
+    public const RUSSIAN_PASSPORT_2013_LANGUAGE_CODE = 'ru__passport_2013';
 
-    const RUSSIAN_GOST_2000_B_LANGUAGE_CODE = 'ru__gost_2000_b';
+    public const RUSSIAN_GOST_2000_B_LANGUAGE_CODE = 'ru__gost_2000_b';
 
-    const UKRAINIAN_LANGUAGE_CODE = 'uk';
+    public const UKRAINIAN_LANGUAGE_CODE = 'uk';
 
-    const KAZAKH_LANGUAGE_CODE = 'kk';
+    public const KAZAKH_LANGUAGE_CODE = 'kk';
 
-    const CZECH_LANGUAGE_CODE = 'cs';
+    public const CZECH_LANGUAGE_CODE = 'cs';
 
-    const DANISH_LANGUAGE_CODE = 'da';
+    public const DANISH_LANGUAGE_CODE = 'da';
 
-    const POLISH_LANGUAGE_CODE = 'pl';
+    public const POLISH_LANGUAGE_CODE = 'pl';
 
-    const ROMANIAN_LANGUAGE_CODE = 'ro';
+    public const ROMANIAN_LANGUAGE_CODE = 'ro';
 
-    const ESPERANTO_LANGUAGE_CODE = 'eo';
+    public const ESPERANTO_LANGUAGE_CODE = 'eo';
 
-    const ESTONIAN_LANGUAGE_CODE = 'et';
+    public const ESTONIAN_LANGUAGE_CODE = 'et';
 
-    const LATVIAN_LANGUAGE_CODE = 'lv';
+    public const LATVIAN_LANGUAGE_CODE = 'lv';
 
-    const LITHUANIAN_LANGUAGE_CODE = 'lt';
+    public const LITHUANIAN_LANGUAGE_CODE = 'lt';
 
-    const NORWEGIAN_LANGUAGE_CODE = 'no';
+    public const NORWEGIAN_LANGUAGE_CODE = 'no';
 
-    const VIETNAMESE_LANGUAGE_CODE = 'vi';
+    public const VIETNAMESE_LANGUAGE_CODE = 'vi';
 
-    const ARABIC_LANGUAGE_CODE = 'ar';
+    public const ARABIC_LANGUAGE_CODE = 'ar';
 
-    const PERSIAN_LANGUAGE_CODE = 'fa';
+    public const PERSIAN_LANGUAGE_CODE = 'fa';
 
-    const SERBIAN_LANGUAGE_CODE = 'sr';
+    public const SERBIAN_LANGUAGE_CODE = 'sr';
 
-    const SERBIAN_CYRILLIC_LANGUAGE_CODE = 'sr__cyr';
+    public const SERBIAN_CYRILLIC_LANGUAGE_CODE = 'sr__cyr';
 
-    const SERBIAN_LATIN_LANGUAGE_CODE = 'sr__lat';
+    public const SERBIAN_LATIN_LANGUAGE_CODE = 'sr__lat';
 
-    const AZERBAIJANI_LANGUAGE_CODE = 'az';
+    public const AZERBAIJANI_LANGUAGE_CODE = 'az';
 
-    const SLOVAK_LANGUAGE_CODE = 'sk';
+    public const SLOVAK_LANGUAGE_CODE = 'sk';
 
-    const FRENCH_LANGUAGE_CODE = 'fr';
+    public const FRENCH_LANGUAGE_CODE = 'fr';
 
-    const FRENCH_AUSTRIAN_LANGUAGE_CODE = 'fr_at';
+    public const FRENCH_AUSTRIAN_LANGUAGE_CODE = 'fr_at';
 
-    const FRENCH_SWITZERLAND_LANGUAGE_CODE = 'fr_ch';
+    public const FRENCH_SWITZERLAND_LANGUAGE_CODE = 'fr_ch';
 
-    const GERMAN_LANGUAGE_CODE = 'de';
+    public const GERMAN_LANGUAGE_CODE = 'de';
 
-    const GERMAN_AUSTRIAN_LANGUAGE_CODE = 'de_at';
+    public const GERMAN_AUSTRIAN_LANGUAGE_CODE = 'de_at';
 
-    const GERMAN_SWITZERLAND_LANGUAGE_CODE = 'de_ch';
+    public const GERMAN_SWITZERLAND_LANGUAGE_CODE = 'de_ch';
 
-    const ENGLISH_LANGUAGE_CODE = 'en';
+    public const ENGLISH_LANGUAGE_CODE = 'en';
 
-    const EXTRA_LATIN_CHARS_LANGUAGE_CODE = 'latin';
+    public const EXTRA_LATIN_CHARS_LANGUAGE_CODE = 'latin';
 
-    const EXTRA_WHITESPACE_CHARS_LANGUAGE_CODE = ' ';
+    public const EXTRA_WHITESPACE_CHARS_LANGUAGE_CODE = ' ';
 
-    const EXTRA_MSWORD_CHARS_LANGUAGE_CODE = 'msword';
+    public const EXTRA_MSWORD_CHARS_LANGUAGE_CODE = 'msword';
 
     /**
      * @var array<string, array<string, string>>|null
