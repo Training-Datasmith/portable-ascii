@@ -10,7 +10,7 @@ install:
   - ps: Set-Service wuauserv -StartupType Manual
   - cinst -y curl
   - cinst -y OpenSSL.Light
-  - SET PATH=C:\Program Files\OpenSSL;%PATH%
+  - SET PATH=C:\Program Files\Open_SSL;%PATH%
   - cinst -y php --version "7.0.33"
   - cd C:\tools\php70\ext
   - curl -O https://xdebug.org/files/php_xdebug-2.4.1-7.0-vc14-nts-x86_64.dll
