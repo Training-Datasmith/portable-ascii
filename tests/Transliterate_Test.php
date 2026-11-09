@@ -9,58 +9,58 @@ use voku\helper\ASCII;
 /**
  * @internal
  */
-final class TransliterateTest extends \PHPUnit\Framework\TestCase
+final class Transliterate_Test extends \PHPUnit\Framework\TestCase
 {
-    public function testUtf8()
+    public function test_utf8()
     {
         $str = 'testiñg';
         static::assertSame('testing', ASCII::to_transliterate($str));
     }
 
-    public function testAscii()
+    public function test_ascii()
     {
         $str = 'testing';
         static::assertSame('testing', ASCII::to_transliterate($str));
     }
 
-    public function testInvalidChar()
+    public function test_invalid_char()
     {
         $str = "tes\xE9ting";
         static::assertSame('testing', ASCII::to_transliterate($str));
     }
 
-    public function testEmptyStr()
+    public function test_empty_str()
     {
         $str = '';
         static::assertEmpty(ASCII::to_transliterate($str));
     }
 
-    public function testNulAndNon7Bit()
+    public function test_nul_and_non7_bit()
     {
         $str = "a\x00ñ\x00c";
         static::assertSame('anc', ASCII::to_transliterate($str));
     }
 
-    public function testNul()
+    public function test_nul()
     {
         $str = "a\x00b\x00c";
         static::assertSame('abc', ASCII::to_transliterate($str));
     }
 
-    public function testToTransliterate()
+    public function test_to_transliterate()
     {
-        $testsStrict = [];
+        $tests_strict = [];
         if (\extension_loaded('intl') === true) {
             // ---
 
-            $testString = \file_get_contents(__DIR__ . '/fixtures/sample-unicode-chart.txt');
-            $resultString = \file_get_contents(__DIR__ . '/fixtures/sample-ascii-chart.txt');
+            $test_string = \file_get_contents(__DIR__ . '/fixtures/sample-unicode-chart.txt');
+            $result_string = \file_get_contents(__DIR__ . '/fixtures/sample-ascii-chart.txt');
 
-            static::assertSame($resultString, ASCII::to_transliterate($testString, '?', true));
+            static::assertSame($result_string, ASCII::to_transliterate($test_string, '?', true));
 
             // ---
 
-            $testsStrict = [
+            $tests_strict = [
                 ' '                                        => ' ',
                 ''                                         => '',
                 'أبز'                                      => 'abz',
@@ -228,13 +228,13 @@ final class TransliterateTest extends \PHPUnit\Framework\TestCase
         }
 
         for ($i = 0; $i <= 2; ++$i) { // keep this loop for simple performance tests
-            foreach ($testsStrict as $before => $after) {
+            foreach ($tests_strict as $before => $after) {
                 static::assertSame($after, ASCII::to_transliterate($before, '?', true), 'tested: ' . $before);
             }
         }
     }
 
-    public function testCurrency()
+    public function test_currency()
     {
         $tests = [
             '€' => 'EUR',
@@ -284,7 +284,7 @@ final class TransliterateTest extends \PHPUnit\Framework\TestCase
         }
     }
 
-    public function testKeepInvalidCharsStrict()
+    public function test_keep_invalid_chars_strict()
     {
         if (\strtoupper(\substr(\PHP_OS, 0, 3)) === 'WIN') {
             static::markTestSkipped('TODO? -> not working on Windows???');
@@ -293,7 +293,7 @@ final class TransliterateTest extends \PHPUnit\Framework\TestCase
         static::assertSame('ahbk 😀 ♥ 𐎁 𠾴 ᎈ y', \strtolower(ASCII::to_transliterate('أحبك 😀 ♥ 𐎁 𠾴 ᎈ ý', null, true)));
     }
 
-    public function testKeepInvalidChars()
+    public function test_keep_invalid_chars()
     {
         if (\strtoupper(\substr(\PHP_OS, 0, 3)) === 'WIN') {
             static::markTestSkipped('TODO? -> not working on Windows???');
@@ -302,7 +302,7 @@ final class TransliterateTest extends \PHPUnit\Framework\TestCase
         static::assertSame('ahbk 😀 ♥ 𐎁 𠾴 ᎈ y', \strtolower(ASCII::to_transliterate('أحبك 😀 ♥ 𐎁 𠾴 ᎈ ý', null, false)));
     }
 
-    public function specialCharacterProvider(): array
+    public function special_character_provider(): array
     {
         return [
             ['ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ', 'abcdefghijklmnopqrstuvwxyz'],
@@ -315,7 +315,7 @@ final class TransliterateTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @dataProvider specialCharacterProvider
+     * @dataProvider special_character_provider
      */
     public function it_can_replace_special_characters(string $value, string $expected)
     {

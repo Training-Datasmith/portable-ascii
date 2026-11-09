@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$languages = \voku\helper\ASCII::getAllLanguages();
+$languages = \voku\helper\ASCII::get_all_languages();
 
-$languagesKeyLengths = [];
+$languages_key_lengths = [];
 foreach ($languages as $language) {
-    $langSpecific = \voku\helper\ASCII::charsArrayWithOneLanguage($language, false, false);
+    $lang_specific = \voku\helper\ASCII::chars_array_with_one_language($language, false, false);
 
-    $langSpecificKeyLength = \array_map('\mb_strlen', \array_keys($langSpecific));
+    $lang_specific_key_length = \array_map('\mb_strlen', \array_keys($lang_specific));
 
-    if (count($langSpecificKeyLength) === 0) {
-        $languagesKeyLengths[$language] = 0;
+    if (count($lang_specific_key_length) === 0) {
+        $languages_key_lengths[$language] = 0;
     } else {
-        $languagesKeyLengths[$language] = \max($langSpecificKeyLength);
+        $languages_key_lengths[$language] = \max($lang_specific_key_length);
     }
 }
 
-//var_export($languagesKeyLengths);
+//var_export($languages_key_lengths);

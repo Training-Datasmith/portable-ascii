@@ -27,67 +27,67 @@ final class ASCII
     //
     // INFO: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     //
-    public const UZBEK_LANGUAGE_CODE = 'uz';
-    public const TURKMEN_LANGUAGE_CODE = 'tk';
-    public const THAI_LANGUAGE_CODE = 'th';
-    public const PASHTO_LANGUAGE_CODE = 'ps';
-    public const ORIYA_LANGUAGE_CODE = 'or';
-    public const MONGOLIAN_LANGUAGE_CODE = 'mn';
-    public const KOREAN_LANGUAGE_CODE = 'ko';
-    public const KIRGHIZ_LANGUAGE_CODE = 'ky';
-    public const ARMENIAN_LANGUAGE_CODE = 'hy';
-    public const BENGALI_LANGUAGE_CODE = 'bn';
-    public const BELARUSIAN_LANGUAGE_CODE = 'be';
-    public const AMHARIC_LANGUAGE_CODE = 'am';
-    public const JAPANESE_LANGUAGE_CODE = 'ja';
-    public const CHINESE_LANGUAGE_CODE = 'zh';
-    public const DUTCH_LANGUAGE_CODE = 'nl';
-    public const ITALIAN_LANGUAGE_CODE = 'it';
-    public const MACEDONIAN_LANGUAGE_CODE = 'mk';
-    public const PORTUGUESE_LANGUAGE_CODE = 'pt';
-    public const GREEKLISH_LANGUAGE_CODE = 'el__greeklish';
-    public const GREEK_LANGUAGE_CODE = 'el';
-    public const HINDI_LANGUAGE_CODE = 'hi';
-    public const SWEDISH_LANGUAGE_CODE = 'sv';
-    public const TURKISH_LANGUAGE_CODE = 'tr';
-    public const BULGARIAN_LANGUAGE_CODE = 'bg';
-    public const HUNGARIAN_LANGUAGE_CODE = 'hu';
-    public const MYANMAR_LANGUAGE_CODE = 'my';
-    public const CROATIAN_LANGUAGE_CODE = 'hr';
-    public const FINNISH_LANGUAGE_CODE = 'fi';
-    public const GEORGIAN_LANGUAGE_CODE = 'ka';
-    public const RUSSIAN_LANGUAGE_CODE = 'ru';
-    public const RUSSIAN_PASSPORT_2013_LANGUAGE_CODE = 'ru__passport_2013';
-    public const RUSSIAN_GOST_2000_B_LANGUAGE_CODE = 'ru__gost_2000_b';
-    public const UKRAINIAN_LANGUAGE_CODE = 'uk';
-    public const KAZAKH_LANGUAGE_CODE = 'kk';
-    public const CZECH_LANGUAGE_CODE = 'cs';
-    public const DANISH_LANGUAGE_CODE = 'da';
-    public const POLISH_LANGUAGE_CODE = 'pl';
-    public const ROMANIAN_LANGUAGE_CODE = 'ro';
-    public const ESPERANTO_LANGUAGE_CODE = 'eo';
-    public const ESTONIAN_LANGUAGE_CODE = 'et';
-    public const LATVIAN_LANGUAGE_CODE = 'lv';
-    public const LITHUANIAN_LANGUAGE_CODE = 'lt';
-    public const NORWEGIAN_LANGUAGE_CODE = 'no';
-    public const VIETNAMESE_LANGUAGE_CODE = 'vi';
-    public const ARABIC_LANGUAGE_CODE = 'ar';
-    public const PERSIAN_LANGUAGE_CODE = 'fa';
-    public const SERBIAN_LANGUAGE_CODE = 'sr';
-    public const SERBIAN_CYRILLIC_LANGUAGE_CODE = 'sr__cyr';
-    public const SERBIAN_LATIN_LANGUAGE_CODE = 'sr__lat';
-    public const AZERBAIJANI_LANGUAGE_CODE = 'az';
-    public const SLOVAK_LANGUAGE_CODE = 'sk';
-    public const FRENCH_LANGUAGE_CODE = 'fr';
-    public const FRENCH_AUSTRIAN_LANGUAGE_CODE = 'fr_at';
-    public const FRENCH_SWITZERLAND_LANGUAGE_CODE = 'fr_ch';
-    public const GERMAN_LANGUAGE_CODE = 'de';
-    public const GERMAN_AUSTRIAN_LANGUAGE_CODE = 'de_at';
-    public const GERMAN_SWITZERLAND_LANGUAGE_CODE = 'de_ch';
-    public const ENGLISH_LANGUAGE_CODE = 'en';
-    public const EXTRA_LATIN_CHARS_LANGUAGE_CODE = 'latin';
-    public const EXTRA_WHITESPACE_CHARS_LANGUAGE_CODE = ' ';
-    public const EXTRA_MSWORD_CHARS_LANGUAGE_CODE = 'msword';
+    const UZBEK_LANGUAGE_CODE = 'uz';
+    const TURKMEN_LANGUAGE_CODE = 'tk';
+    const THAI_LANGUAGE_CODE = 'th';
+    const PASHTO_LANGUAGE_CODE = 'ps';
+    const ORIYA_LANGUAGE_CODE = 'or';
+    const MONGOLIAN_LANGUAGE_CODE = 'mn';
+    const KOREAN_LANGUAGE_CODE = 'ko';
+    const KIRGHIZ_LANGUAGE_CODE = 'ky';
+    const ARMENIAN_LANGUAGE_CODE = 'hy';
+    const BENGALI_LANGUAGE_CODE = 'bn';
+    const BELARUSIAN_LANGUAGE_CODE = 'be';
+    const AMHARIC_LANGUAGE_CODE = 'am';
+    const JAPANESE_LANGUAGE_CODE = 'ja';
+    const CHINESE_LANGUAGE_CODE = 'zh';
+    const DUTCH_LANGUAGE_CODE = 'nl';
+    const ITALIAN_LANGUAGE_CODE = 'it';
+    const MACEDONIAN_LANGUAGE_CODE = 'mk';
+    const PORTUGUESE_LANGUAGE_CODE = 'pt';
+    const GREEKLISH_LANGUAGE_CODE = 'el__greeklish';
+    const GREEK_LANGUAGE_CODE = 'el';
+    const HINDI_LANGUAGE_CODE = 'hi';
+    const SWEDISH_LANGUAGE_CODE = 'sv';
+    const TURKISH_LANGUAGE_CODE = 'tr';
+    const BULGARIAN_LANGUAGE_CODE = 'bg';
+    const HUNGARIAN_LANGUAGE_CODE = 'hu';
+    const MYANMAR_LANGUAGE_CODE = 'my';
+    const CROATIAN_LANGUAGE_CODE = 'hr';
+    const FINNISH_LANGUAGE_CODE = 'fi';
+    const GEORGIAN_LANGUAGE_CODE = 'ka';
+    const RUSSIAN_LANGUAGE_CODE = 'ru';
+    const RUSSIAN_PASSPORT_2013_LANGUAGE_CODE = 'ru__passport_2013';
+    const RUSSIAN_GOST_2000_B_LANGUAGE_CODE = 'ru__gost_2000_b';
+    const UKRAINIAN_LANGUAGE_CODE = 'uk';
+    const KAZAKH_LANGUAGE_CODE = 'kk';
+    const CZECH_LANGUAGE_CODE = 'cs';
+    const DANISH_LANGUAGE_CODE = 'da';
+    const POLISH_LANGUAGE_CODE = 'pl';
+    const ROMANIAN_LANGUAGE_CODE = 'ro';
+    const ESPERANTO_LANGUAGE_CODE = 'eo';
+    const ESTONIAN_LANGUAGE_CODE = 'et';
+    const LATVIAN_LANGUAGE_CODE = 'lv';
+    const LITHUANIAN_LANGUAGE_CODE = 'lt';
+    const NORWEGIAN_LANGUAGE_CODE = 'no';
+    const VIETNAMESE_LANGUAGE_CODE = 'vi';
+    const ARABIC_LANGUAGE_CODE = 'ar';
+    const PERSIAN_LANGUAGE_CODE = 'fa';
+    const SERBIAN_LANGUAGE_CODE = 'sr';
+    const SERBIAN_CYRILLIC_LANGUAGE_CODE = 'sr__cyr';
+    const SERBIAN_LATIN_LANGUAGE_CODE = 'sr__lat';
+    const AZERBAIJANI_LANGUAGE_CODE = 'az';
+    const SLOVAK_LANGUAGE_CODE = 'sk';
+    const FRENCH_LANGUAGE_CODE = 'fr';
+    const FRENCH_AUSTRIAN_LANGUAGE_CODE = 'fr_at';
+    const FRENCH_SWITZERLAND_LANGUAGE_CODE = 'fr_ch';
+    const GERMAN_LANGUAGE_CODE = 'de';
+    const GERMAN_AUSTRIAN_LANGUAGE_CODE = 'de_at';
+    const GERMAN_SWITZERLAND_LANGUAGE_CODE = 'de_ch';
+    const ENGLISH_LANGUAGE_CODE = 'en';
+    const EXTRA_LATIN_CHARS_LANGUAGE_CODE = 'latin';
+    const EXTRA_WHITESPACE_CHARS_LANGUAGE_CODE = ' ';
+    const EXTRA_MSWORD_CHARS_LANGUAGE_CODE = 'msword';
     /**
      * @var array<string, array<string, string>>|null
      */
@@ -155,7 +155,7 @@ final class ASCII
         if ($LANGUAGES !== []) {
             return $LANGUAGES;
         }
-        foreach ((new \ReflectionClass(self::class))->get_constants() as $constant => $lang) {
+        foreach ((new \ReflectionClass(self::class))->getConstants() as $constant => $lang) {
             if (\strpos($constant, 'EXTRA') !== false) {
                 $LANGUAGES[\strtolower($constant)] = $lang;
             } else {
@@ -168,7 +168,7 @@ final class ASCII
      * Returns an replacement array for ASCII methods.
      *
      * EXAMPLE: <code>
-     * $array = ASCII::charsArray();
+     * $array = ASCII::chars_array();
      * var_dump($array['ru']['б']); // 'b'
      * </code>
      *
@@ -193,7 +193,7 @@ final class ASCII
      * Returns an replacement array for ASCII methods with a mix of multiple languages.
      *
      * EXAMPLE: <code>
-     * $array = ASCII::charsArrayWithMultiLanguageValues();
+     * $array = ASCII::chars_array_with_multi_language_values();
      * var_dump($array['b']); // ['β', 'б', 'ဗ', 'ბ', 'ب']
      * </code>
      *
@@ -228,20 +228,20 @@ final class ASCII
      * will simply return e.g. 'a'.
      *
      * EXAMPLE: <code>
-     * $array = ASCII::charsArrayWithOneLanguage('ru');
-     * $tmpKey = \array_search('yo', $array['replace']);
-     * echo $array['orig'][$tmpKey]; // 'ё'
+     * $array = ASCII::chars_array_with_one_language('ru');
+     * $tmp_key = \array_search('yo', $array['replace']);
+     * echo $array['orig'][$tmp_key]; // 'ё'
      * </code>
      *
      * @param string $language              [optional] <p>Language of the source string e.g.: en, de_at, or de-ch.
      *                                      (default is 'en') | ASCII::*_LANGUAGE_CODE</p>
      * @param bool   $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>
-     * @param bool   $asOrigReplaceArray    [optional] <p>TRUE === return {orig: list<string>, replace: list<string>}
+     * @param bool   $as_orig_replace_array    [optional] <p>TRUE === return {orig: list<string>, replace: list<string>}
      *                                      array</p>
      *
      * @psalm-pure
      *
-     * @return ($asOrigReplaceArray is true ? array{orig: list<string>, replace: list<string>} : array<string, string>)
+     * @return ($as_orig_replace_array is true ? array{orig: list<string>, replace: list<string>} : array<string, string>)
      *
      * @phpstan-param ASCII::*_LANGUAGE_CODE $language
      */
@@ -290,18 +290,18 @@ final class ASCII
      * Returns an replacement array for ASCII methods with multiple languages.
      *
      * EXAMPLE: <code>
-     * $array = ASCII::charsArrayWithSingleLanguageValues();
-     * $tmpKey = \array_search('hnaik', $array['replace']);
-     * echo $array['orig'][$tmpKey]; // '၌'
+     * $array = ASCII::chars_array_with_single_language_values();
+     * $tmp_key = \array_search('hnaik', $array['replace']);
+     * echo $array['orig'][$tmp_key]; // '၌'
      * </code>
      *
      * @param bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>
-     * @param bool $asOrigReplaceArray    [optional] <p>TRUE === return {orig: list<string>, replace: list<string>}
+     * @param bool $as_orig_replace_array    [optional] <p>TRUE === return {orig: list<string>, replace: list<string>}
      *                                    array</p>
      *
      * @psalm-pure
      *
-     * @return ($asOrigReplaceArray is true ? array{orig: list<string>, replace: list<string>} : array<string, string>)
+     * @return ($as_orig_replace_array is true ? array{orig: list<string>, replace: list<string>} : array<string, string>)
      */
     public static function chars_array_with_single_language_values(bool $replace_extra_symbols = false, bool $as_orig_replace_array = true): array
     {
@@ -438,8 +438,8 @@ final class ASCII
      * </code>
      *
      * @param string $str                          <p>The string to be normalized.</p>
-     * @param bool   $keepNonBreakingSpace         [optional] <p>Set to true, to keep non-breaking-spaces.</p>
-     * @param bool   $keepBidiUnicodeControls      [optional] <p>Set to true, to keep non-printable (for the web)
+     * @param bool   $keep_non_breaking_space         [optional] <p>Set to true, to keep non-breaking-spaces.</p>
+     * @param bool   $keep_bidi_unicode_controls      [optional] <p>Set to true, to keep non-printable (for the web)
      *                                             bidirectional text chars.</p>
      * @param bool   $normalize_control_characters [optional] <p>Set to true, to convert e.g. LINE-, PARAGRAPH-SEPARATOR with "\n" and LINE TABULATION with "\t".</p>
      *
@@ -617,7 +617,7 @@ final class ASCII
                         }
                         if ($five_chars && !isset($char_done[$five_chars]) && isset($REPLACE_HELPER_CACHE[$cache_key][$five_chars]) && \strpos($str, $five_chars) !== false) {
                             // DEBUG
-                            //\var_dump($str, $fiveChars, $REPLACE_HELPER_CACHE[$cacheKey][$fiveChars]);
+                            //\var_dump($str, $five_chars, $REPLACE_HELPER_CACHE[$cache_key][$five_chars]);
                             $char_done[$five_chars] = true;
                             $str = \str_replace($five_chars, $REPLACE_HELPER_CACHE[$cache_key][$five_chars], $str);
                             // DEBUG
@@ -634,7 +634,7 @@ final class ASCII
                         }
                         if ($four_chars && !isset($char_done[$four_chars]) && isset($REPLACE_HELPER_CACHE[$cache_key][$four_chars]) && \strpos($str, $four_chars) !== false) {
                             // DEBUG
-                            //\var_dump($str, $fourChars, $REPLACE_HELPER_CACHE[$cacheKey][$fourChars]);
+                            //\var_dump($str, $four_chars, $REPLACE_HELPER_CACHE[$cache_key][$four_chars]);
                             $char_done[$four_chars] = true;
                             $str = \str_replace($four_chars, $REPLACE_HELPER_CACHE[$cache_key][$four_chars], $str);
                             // DEBUG
@@ -650,7 +650,7 @@ final class ASCII
                     }
                     if ($three_chars && !isset($char_done[$three_chars]) && isset($REPLACE_HELPER_CACHE[$cache_key][$three_chars]) && \strpos($str, $three_chars) !== false) {
                         // DEBUG
-                        //\var_dump($str, $threeChars, $REPLACE_HELPER_CACHE[$cacheKey][$threeChars]);
+                        //\var_dump($str, $three_chars, $REPLACE_HELPER_CACHE[$cache_key][$three_chars]);
                         $char_done[$three_chars] = true;
                         $str = \str_replace($three_chars, $REPLACE_HELPER_CACHE[$cache_key][$three_chars], $str);
                         // DEBUG
@@ -665,7 +665,7 @@ final class ASCII
                     }
                     if ($two_chars && !isset($char_done[$two_chars]) && isset($REPLACE_HELPER_CACHE[$cache_key][$two_chars]) && \strpos($str, $two_chars) !== false) {
                         // DEBUG
-                        //\var_dump($str, $twoChars, $REPLACE_HELPER_CACHE[$cacheKey][$twoChars]);
+                        //\var_dump($str, $two_chars, $REPLACE_HELPER_CACHE[$cache_key][$two_chars]);
                         $char_done[$two_chars] = true;
                         $str = \str_replace($two_chars, $REPLACE_HELPER_CACHE[$cache_key][$two_chars], $str);
                         // DEBUG
@@ -676,7 +676,7 @@ final class ASCII
             foreach ($matches[0] as $char) {
                 if (!isset($char_done[$char]) && isset($REPLACE_HELPER_CACHE[$cache_key][$char]) && \strpos($str, $char) !== false) {
                     // DEBUG
-                    //\var_dump($str, $char, $REPLACE_HELPER_CACHE[$cacheKey][$char]);
+                    //\var_dump($str, $char, $REPLACE_HELPER_CACHE[$cache_key][$char]);
                     $char_done[$char] = true;
                     $str = \str_replace($char, $REPLACE_HELPER_CACHE[$cache_key][$char], $str);
                     // DEBUG
@@ -864,18 +864,18 @@ final class ASCII
                     }
                     // We only process valid UTF-8 chars (<= 4 byte), so we don't need this code here ...
                     /*
-                                        if ($ordC0 >= 248) {
-                       $ordC4 = self::$ORD[$c[4]];
+                                        if ($ord_c0 >= 248) {
+                       $ord_c4 = self::$ORD[$c[4]];
                     
-                       if ($ordC0 <= 251) {
-                           $ord = ($ordC0 - 248) * 16777216 + ($ordC1 - 128) * 262144 + ($ordC2 - 128) * 4096 + ($ordC3 - 128) * 64 + ($ordC4 - 128);
+                       if ($ord_c0 <= 251) {
+                           $ord = ($ord_c0 - 248) * 16777216 + ($ord_c1 - 128) * 262144 + ($ord_c2 - 128) * 4096 + ($ord_c3 - 128) * 64 + ($ord_c4 - 128);
                        }
                     
-                       if ($ordC0 >= 252) {
-                           $ordC5 = self::$ORD[$c[5]];
+                       if ($ord_c0 >= 252) {
+                           $ord_c5 = self::$ORD[$c[5]];
                     
-                           if ($ordC0 <= 253) {
-                               $ord = ($ordC0 - 252) * 1073741824 + ($ordC1 - 128) * 16777216 + ($ordC2 - 128) * 262144 + ($ordC3 - 128) * 4096 + ($ordC4 - 128) * 64 + ($ordC5 - 128);
+                           if ($ord_c0 <= 253) {
+                               $ord = ($ord_c0 - 252) * 1073741824 + ($ord_c1 - 128) * 16777216 + ($ord_c2 - 128) * 262144 + ($ord_c3 - 128) * 4096 + ($ord_c4 - 128) * 64 + ($ord_c5 - 128);
                            }
                        }
                                         }

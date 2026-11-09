@@ -90,12 +90,12 @@ The API from the "ASCII"-Class is written as small static methods.
 
 ## Class methods
 
-<p id="voku-php-readme-class-methods"></p><table><tr><td><a href="#charsarraybool-replace_extra_symbols-array">charsArray</a>
-</td><td><a href="#charsarraywithmultilanguagevaluesbool-replace_extra_symbols-array">charsArrayWithMultiLanguageValues</a>
-</td><td><a href="#charsarraywithonelanguagestring-language-bool-replace_extra_symbols-bool-asorigreplacearray-array">charsArrayWithOneLanguage</a>
-</td><td><a href="#charsarraywithsinglelanguagevaluesbool-replace_extra_symbols-bool-asorigreplacearray-array">charsArrayWithSingleLanguageValues</a>
+<p id="voku-php-readme-class-methods"></p><table><tr><td><a href="#charsarraybool-replace_extra_symbols-array">chars_array</a>
+</td><td><a href="#charsarraywithmultilanguagevaluesbool-replace_extra_symbols-array">chars_array_with_multi_language_values</a>
+</td><td><a href="#charsarraywithonelanguagestring-language-bool-replace_extra_symbols-bool-asorigreplacearray-array">chars_array_with_one_language</a>
+</td><td><a href="#charsarraywithsinglelanguagevaluesbool-replace_extra_symbols-bool-asorigreplacearray-array">chars_array_with_single_language_values</a>
 </td></tr><tr><td><a href="#cleanstring-str-bool-normalize_whitespace-bool-keep_non_breaking_space-bool-normalize_msword-bool-remove_invisible_characters-string">clean</a>
-</td><td><a href="#getalllanguages-string">getAllLanguages</a>
+</td><td><a href="#getalllanguages-string">get_all_languages</a>
 </td><td><a href="#is_asciistring-str-bool">is_ascii</a>
 </td><td><a href="#normalize_mswordstring-str-string">normalize_msword</a>
 </td></tr><tr><td><a href="#normalize_whitespacestring-str-bool-keepnonbreakingspace-bool-keepbidiunicodecontrols-bool-normalize_control_characters-string">normalize_whitespace</a>
@@ -107,12 +107,12 @@ The API from the "ASCII"-Class is written as small static methods.
 </td><td><a href="#to_transliteratestring-str-stringnull-unknown-bool-strict-string">to_transliterate</a>
 </td></tr></table>
 
-#### charsArray(bool $replace_extra_symbols): array
+#### chars_array(bool $replace_extra_symbols): array
 <a href="#voku-php-readme-class-methods">↑</a>
 Returns an replacement array for ASCII methods.
 
 EXAMPLE: <code>
-$array = ASCII::charsArray();
+$array = ASCII::chars_array();
 var_dump($array['ru']['б']); // 'b'
 </code>
 
@@ -124,12 +124,12 @@ var_dump($array['ru']['б']); // 'b'
 
 --------
 
-#### charsArrayWithMultiLanguageValues(bool $replace_extra_symbols): array
+#### chars_array_with_multi_language_values(bool $replace_extra_symbols): array
 <a href="#voku-php-readme-class-methods">↑</a>
 Returns an replacement array for ASCII methods with a mix of multiple languages.
 
 EXAMPLE: <code>
-$array = ASCII::charsArrayWithMultiLanguageValues();
+$array = ASCII::chars_array_with_multi_language_values();
 var_dump($array['b']); // ['β', 'б', 'ဗ', 'ბ', 'ب']
 </code>
 
@@ -141,7 +141,7 @@ var_dump($array['b']); // ['β', 'б', 'ဗ', 'ბ', 'ب']
 
 --------
 
-#### charsArrayWithOneLanguage(string $language, bool $replace_extra_symbols, bool $asOrigReplaceArray): array
+#### chars_array_with_one_language(string $language, bool $replace_extra_symbols, bool $as_orig_replace_array): array
 <a href="#voku-php-readme-class-methods">↑</a>
 Returns an replacement array for ASCII methods with one language.
 
@@ -149,7 +149,7 @@ For example, German will map 'ä' to 'ae', while other languages
 will simply return e.g. 'a'.
 
 EXAMPLE: <code>
-$array = ASCII::charsArrayWithOneLanguage('ru');
+$array = ASCII::chars_array_with_one_language('ru');
 $tmpKey = \array_search('yo', $array['replace']);
 echo $array['orig'][$tmpKey]; // 'ё'
 </code>
@@ -158,7 +158,7 @@ echo $array['orig'][$tmpKey]; // 'ё'
 - `ASCII::* $language [optional] <p>Language of the source string e.g.: en, de_at, or de-ch.
 (default is 'en') | ASCII::*_LANGUAGE_CODE</p>`
 - `bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>`
-- `bool $asOrigReplaceArray [optional] <p>TRUE === return {orig: string[], replace: string[]}
+- `bool $as_orig_replace_array [optional] <p>TRUE === return {orig: string[], replace: string[]}
 array</p>`
 
 **Return:**
@@ -166,19 +166,19 @@ array</p>`
 
 --------
 
-#### charsArrayWithSingleLanguageValues(bool $replace_extra_symbols, bool $asOrigReplaceArray): array
+#### chars_array_with_single_language_values(bool $replace_extra_symbols, bool $as_orig_replace_array): array
 <a href="#voku-php-readme-class-methods">↑</a>
 Returns an replacement array for ASCII methods with multiple languages.
 
 EXAMPLE: <code>
-$array = ASCII::charsArrayWithSingleLanguageValues();
+$array = ASCII::chars_array_with_single_language_values();
 $tmpKey = \array_search('hnaik', $array['replace']);
 echo $array['orig'][$tmpKey]; // '၌'
 </code>
 
 **Parameters:**
 - `bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>`
-- `bool $asOrigReplaceArray [optional] <p>TRUE === return {orig: string[], replace: string[]}
+- `bool $as_orig_replace_array [optional] <p>TRUE === return {orig: string[], replace: string[]}
 array</p>`
 
 **Return:**
@@ -208,7 +208,7 @@ characters e.g.: "\0"</p>`
 
 --------
 
-#### getAllLanguages(): string[]
+#### get_all_languages(): string[]
 <a href="#voku-php-readme-class-methods">↑</a>
 Get all languages from the constants "ASCII::.*LANGUAGE_CODE".
 
@@ -257,7 +257,7 @@ ASCII::normalize_msword('„Abcdef…”'); // '"Abcdef..."'
 
 --------
 
-#### normalize_whitespace(string $str, bool $keepNonBreakingSpace, bool $keepBidiUnicodeControls, bool $normalize_control_characters): string
+#### normalize_whitespace(string $str, bool $keep_non_breaking_space, bool $keep_bidi_unicode_controls, bool $normalize_control_characters): string
 <a href="#voku-php-readme-class-methods">↑</a>
 Normalize the whitespace.
 
@@ -267,8 +267,8 @@ ASCII::normalize_whitespace("abc-\xc2\xa0-öäü-\xe2\x80\xaf-\xE2\x80\xAC", tru
 
 **Parameters:**
 - `string $str <p>The string to be normalized.</p>`
-- `bool $keepNonBreakingSpace [optional] <p>Set to true, to keep non-breaking-spaces.</p>`
-- `bool $keepBidiUnicodeControls [optional] <p>Set to true, to keep non-printable (for the web)
+- `bool $keep_non_breaking_space [optional] <p>Set to true, to keep non-breaking-spaces.</p>`
+- `bool $keep_bidi_unicode_controls [optional] <p>Set to true, to keep non-printable (for the web)
 bidirectional text chars.</p>`
 - `bool $normalize_control_characters [optional] <p>Set to true, to convert e.g. LINE-, PARAGRAPH-SEPARATOR with "\n" and LINE TABULATION with "\t".</p>`
 

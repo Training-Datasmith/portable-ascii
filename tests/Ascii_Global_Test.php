@@ -9,9 +9,9 @@ use voku\helper\ASCII;
 /**
  * @internal
  */
-final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
+final class Ascii_Global_Test extends \PHPUnit\Framework\TestCase
 {
-    public function slugifyProvider(): array
+    public function slugify_provider(): array
     {
         return [
             ['', ''],
@@ -47,9 +47,9 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
         ];
     }
 
-    public function testCharsArrayWithMultiLanguageValues()
+    public function test_chars_array_with_multi_language_values()
     {
-        $array = ASCII::charsArrayWithMultiLanguageValues();
+        $array = ASCII::chars_array_with_multi_language_values();
 
         static::assertSame(
             [
@@ -65,7 +65,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // -- check the static cache
 
-        $array = ASCII::charsArrayWithMultiLanguageValues();
+        $array = ASCII::chars_array_with_multi_language_values();
 
         static::assertSame(
             [
@@ -81,7 +81,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // ---
 
-        $array = ASCII::charsArrayWithMultiLanguageValues(true);
+        $array = ASCII::chars_array_with_multi_language_values(true);
 
         static::assertSame(
             [
@@ -106,7 +106,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // -- check the static cache
 
-        $array = ASCII::charsArrayWithMultiLanguageValues(true);
+        $array = ASCII::chars_array_with_multi_language_values(true);
 
         static::assertSame(
             [
@@ -131,23 +131,23 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
         static::assertSame(['€'], $array[' Euro ']);
     }
 
-    public function testCharsArrayWithOneLanguage()
+    public function test_chars_array_with_one_language()
     {
-        $array = ASCII::charsArrayWithOneLanguage('abcde');
+        $array = ASCII::chars_array_with_one_language('abcde');
 
         static::assertSame([], $array['replace']);
         static::assertSame([], $array['orig']);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('####');
+        $array = ASCII::chars_array_with_one_language('####');
 
         static::assertSame([], $array['replace']);
         static::assertSame([], $array['orig']);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de_at');
+        $array = ASCII::chars_array_with_one_language('de_at');
 
         static::assertContains('Ae', $array['replace']);
         static::assertContains('sz', $array['replace']);
@@ -156,7 +156,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de-CH');
+        $array = ASCII::chars_array_with_one_language('de-CH');
 
         static::assertContains('Ae', $array['replace']);
         static::assertContains('ss', $array['replace']);
@@ -165,104 +165,104 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de');
+        $array = ASCII::chars_array_with_one_language('de');
 
         static::assertContains('Ae', $array['replace']);
         static::assertNotContains('yo', $array['replace']);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de_DE');
+        $array = ASCII::chars_array_with_one_language('de_DE');
 
         static::assertContains('Ae', $array['replace']);
         static::assertNotContains('yo', $array['replace']);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de-DE');
+        $array = ASCII::chars_array_with_one_language('de-DE');
 
         static::assertContains('Ae', $array['replace']);
         static::assertNotContains('yo', $array['replace']);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('ru');
+        $array = ASCII::chars_array_with_one_language('ru');
 
         static::assertNotContains('Ae', $array['replace']);
         static::assertContains('yo', $array['replace']);
 
-        $tmpKey = \array_search('yo', $array['replace'], true);
-        static::assertSame('ё', $array['orig'][$tmpKey]);
+        $tmp_key = \array_search('yo', $array['replace'], true);
+        static::assertSame('ё', $array['orig'][$tmp_key]);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('de', true);
+        $array = ASCII::chars_array_with_one_language('de', true);
 
         static::assertContains('Ae', $array['replace']);
         static::assertNotContains('yo', $array['replace']);
         static::assertContains(' und ', $array['replace']);
         static::assertNotContains(' и ', $array['replace']);
 
-        $tmpKey = \array_search(' und ', $array['replace'], true);
-        static::assertSame('&', $array['orig'][$tmpKey]);
+        $tmp_key = \array_search(' und ', $array['replace'], true);
+        static::assertSame('&', $array['orig'][$tmp_key]);
 
         // ---
 
-        $array = ASCII::charsArrayWithOneLanguage('ru', true);
+        $array = ASCII::chars_array_with_one_language('ru', true);
 
         static::assertContains('yo', $array['replace']);
         static::assertNotContains('Ae', $array['replace']);
         static::assertContains(' i ', $array['replace']);
         static::assertNotContains(' und ', $array['replace']);
 
-        $tmpKey = \array_search(' i ', $array['replace'], true);
-        static::assertSame('&', $array['orig'][$tmpKey]);
+        $tmp_key = \array_search(' i ', $array['replace'], true);
+        static::assertSame('&', $array['orig'][$tmp_key]);
     }
 
-    public function testCharsArrayWithSingleLanguageValues()
+    public function test_chars_array_with_single_language_values()
     {
-        $array = ASCII::charsArrayWithSingleLanguageValues();
+        $array = ASCII::chars_array_with_single_language_values();
 
         static::assertContains('hnaik', $array['replace']);
         static::assertContains('yo', $array['replace']);
 
-        $tmpKey = \array_search('hnaik', $array['replace'], true);
-        static::assertSame('၌', $array['orig'][$tmpKey]);
+        $tmp_key = \array_search('hnaik', $array['replace'], true);
+        static::assertSame('၌', $array['orig'][$tmp_key]);
 
         // ---
 
-        $array = ASCII::charsArrayWithSingleLanguageValues(true);
+        $array = ASCII::chars_array_with_single_language_values(true);
 
         static::assertContains('hnaik', $array['replace']);
         static::assertContains('yo', $array['replace']);
         static::assertContains(' pound ', $array['replace']);
 
-        $tmpKey = \array_search(' pound ', $array['replace'], true);
-        static::assertSame('£', $array['orig'][$tmpKey]);
+        $tmp_key = \array_search(' pound ', $array['replace'], true);
+        static::assertSame('£', $array['orig'][$tmp_key]);
     }
 
-    public function testCharsArray()
+    public function test_chars_array()
     {
-        $array = ASCII::charsArray();
+        $array = ASCII::chars_array();
 
         static::assertSame('b', $array['ru']['б']);
 
         // ---
 
-        $arrayMore = ASCII::charsArray(true);
+        $array_more = ASCII::chars_array(true);
 
-        static::assertSame('b', $arrayMore['ru']['б']);
+        static::assertSame('b', $array_more['ru']['б']);
 
-        static::assertSame(' i ', $arrayMore['ru']['&']);
+        static::assertSame(' i ', $array_more['ru']['&']);
 
         // ---
 
-        static::assertGreaterThan(\count($array), \count($arrayMore));
+        static::assertGreaterThan(\count($array), \count($array_more));
     }
 
-    public function testFilterFile()
+    public function test_filter_file()
     {
-        $testArray = [
+        $test_array = [
             "test-\xe9\x00\x0é大般若經.txt"      => 'test-.txt',
             'test-大般若經.txt'                  => 'test-.txt',
             'фото.jpg'                       => '.jpg',
@@ -274,13 +274,13 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
             ' '                              => '',
         ];
 
-        foreach ($testArray as $before => $after) {
+        foreach ($test_array as $before => $after) {
             static::assertSame($after, ASCII::to_filename($before, false));
         }
 
         // ---
 
-        $testArray = [
+        $test_array = [
             "test-\xe9\x00\x0é大般若經.txt"      => 'test-eDa-Ban-Ruo-Jing-.txt',
             'test-大般若經.txt'                  => 'test-Da-Ban-Ruo-Jing-.txt',
             'фото.jpg'                       => 'foto.jpg',
@@ -292,13 +292,13 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
             ' '                              => '',
         ];
 
-        foreach ($testArray as $before => $after) {
+        foreach ($test_array as $before => $after) {
             static::assertSame($after, ASCII::to_filename($before, true));
         }
     }
 
     /**
-     * @dataProvider slugifyProvider()
+     * @dataProvider slugify_provider()
      *
      * @param string $expected
      * @param string $str
@@ -308,7 +308,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
      * @param bool   $replace_extra_symbols
      * @param bool   $use_transliterate
      */
-    public function testSlugify(
+    public function test_slugify(
         $expected,
         $str,
         $replacement = '-',
@@ -331,7 +331,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @dataProvider toAsciiProvider()
+     * @dataProvider to_ascii_provider()
      *
      * @param string $expected
      * @param string $str
@@ -340,7 +340,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
      * @param bool   $replace_extra_symbols
      * @param bool   $use_transliterate
      */
-    public function testToAscii(
+    public function test_to_ascii(
         $expected,
         $str,
         $language = 'en',
@@ -361,9 +361,9 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
         static::assertSame($expected, $result, 'tested: ' . $str);
     }
 
-    public function testIsAsciiTest()
+    public function test_is_ascii_test()
     {
-        $a = ASCII::charsArrayWithMultiLanguageValues(false);
+        $a = ASCII::chars_array_with_multi_language_values(false);
 
         foreach ($a as $k => $v) {
             static::assertTrue(ASCII::is_ascii((string) $k), 'tested: ' . $k . ' - ' . \print_r($v, true));
@@ -371,7 +371,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
 
         // ---
 
-        $a = ASCII::charsArrayWithMultiLanguageValues(true);
+        $a = ASCII::chars_array_with_multi_language_values(true);
 
         $skip = [
             '∑' => '∑',
@@ -388,7 +388,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
         }
     }
 
-    public function toAsciiProvider(): array
+    public function to_ascii_provider(): array
     {
         return [
             ['      ! " # $ % & \' ( ) * + , @ `', " \v \t \n" . ' ! " # $ % & \' ( ) * + , @ `'], // ascii symbols
@@ -595,52 +595,52 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
     /**
      * @noinspection DuplicatedCode
      */
-    public function testCleanParameter()
+    public function test_clean_parameter()
     {
-        $dirtyTestString = "\xEF\xBB\xBF„Abcdef\xc2\xa0\x20…” — 😃";
+        $dirty_test_string = "\xEF\xBB\xBF„Abcdef\xc2\xa0\x20…” — 😃";
 
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, false, true, false, false));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, false, false, false, true));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, false, false, false, false));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, false, false, true, true));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, false, false, true, false));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, false, true, true, false));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, false, true, true, true));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, true, false, false, false));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, true, false, false, true));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, true, false, true, false));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, true, false, true, true));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, true, true, false, false));
-        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirtyTestString, true, true, false, true));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, true, true, true, false));
-        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirtyTestString, true, true, true, true));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, false, true, false, false));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, false, false, false, true));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, false, false, false, false));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, false, false, true, true));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, false, false, true, false));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, false, true, true, false));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, false, true, true, true));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, true, false, false, false));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, true, false, false, true));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, true, false, true, false));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, true, false, true, true));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, true, true, false, false));
+        static::assertSame('﻿„Abcdef  …” — 😃', ASCII::clean($dirty_test_string, true, true, false, true));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, true, true, true, false));
+        static::assertSame('﻿"Abcdef  ..." - 😃', ASCII::clean($dirty_test_string, true, true, true, true));
     }
 
-    public function testLanguageFiles()
+    public function test_language_files()
     {
         $ascii_by_languages = include __DIR__ . '/../src/voku/helper/data/ascii_by_languages.php';
         $ascii_extras_by_languages = include __DIR__ . '/../src/voku/helper/data/ascii_extras_by_languages.php';
 
-        $notFound = [];
+        $not_found = [];
         foreach ($ascii_by_languages as $lang => $tmp) {
             if (\array_key_exists($lang, $ascii_extras_by_languages) === false) {
-                $notFound[$lang] = ' Extra Language was not found! ';
+                $not_found[$lang] = ' Extra Language was not found! ';
             }
         }
 
         // remove false-positive results
         unset(
-            $notFound['latin'],
-            $notFound[' '],
-            $notFound['msword'],
-            $notFound['currency_short']
+            $not_found['latin'],
+            $not_found[' '],
+            $not_found['msword'],
+            $not_found['currency_short']
         );
 
-        static::assertCount(0, $notFound, \print_r($notFound, true));
+        static::assertCount(0, $not_found, \print_r($not_found, true));
     }
 
-    public function testNormalizeMsword()
+    public function test_normalize_msword()
     {
         $tests = [
             ''                                                                         => '',
@@ -657,7 +657,7 @@ final class AsciiGlobalTest extends \PHPUnit\Framework\TestCase
         }
     }
 
-    public function testNormalizeWhitespace()
+    public function test_normalize_whitespace()
     {
         $tests = [
             ''                                                                                    => '',

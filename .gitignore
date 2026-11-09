@@ -4,6 +4,7 @@ composer.lock
 
 # php (phpunit)
 build/logs/
+.phpunit.junit.xml
 .phpunit.result.cache
 
 # phpcs fixer
